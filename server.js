@@ -36,7 +36,7 @@ app.post("/page", (req, res) => {
         console.log(result);
    });
    res.status(200).sendFile(path.join(__dirname, "page.html"));
-})
+});
 
 app.listen(7070);
 console.log("port:7070");
