@@ -26,8 +26,9 @@ app.get("/", function(req,res){
 app.post("/page", (req, res) => {
    var name =  req.query.name;
    var add = req.query.address;
+ Var q = "insert into personal data value (5, '"+name+"', '"+add+"')";
 
-   con.query("insert into personaldata values (4, '?', '?')",[ id,name, add ], function(err, result) {
+   con.query(q, function(err, result) {
         if(err){
             console.log(err);
         }
